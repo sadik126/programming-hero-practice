@@ -1,17 +1,32 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin: 1px;
+    
 }
 
 nav{
     background-color: black;
     color: whitesmoke;
     height: 50px;
+    border: 1px black solid;
+    border-radius: 15px;
+    overflow: hidden;
    
 }
 
-li{
-    display: inline;
-    padding: 10px 40px;
+.left li{
+   float: left;
+   list-style: none;
+    padding: 5px 40px;
     font-size: 30px;
+    text-align: center;
+    
 }
+
+.right li{
+    float: right;
+    list-style: none;
+    padding: 5px 40px;
+    font-size: 30px;
+   
+}
+
