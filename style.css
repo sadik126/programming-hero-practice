@@ -2,3 +2,13 @@
     margin: 0;
     padding: 0;
 }
+
+p{
+    background-color: brown;
+    color: cornsilk;
+}
+
+q{
+    background-color: crimson;
+    color: darkblue;
+}
