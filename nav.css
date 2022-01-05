@@ -2,3 +2,16 @@
     margin: 0;
     padding: 0;
 }
+
+nav{
+    background-color: black;
+    color: whitesmoke;
+    height: 50px;
+   
+}
+
+li{
+    display: inline;
+    padding: 10px 40px;
+    font-size: 30px;
+}
