@@ -7,19 +7,36 @@
     <title>Document</title>
     <style>
         .bat{
-            height: 200px;
+            height: 300px;
             padding: 100px 140px;
             
         }
 
-        .bat:hover{
-            transform: rotate(60deg);
+        .field{
+            border: 2px solid green;
+            background-color: greenyellow;
+        }
+
+        .field:hover .bat{
+            transform: rotate(-60deg);
+            transform-origin: top right;
+        }
+
+        .bat{
+            
+        }
+        .ball{
+            height: 50px;
+            width: 50px;
+            background: red;
+            border-radius: 25px;
         }
     </style>
 </head>
 <body>
     <div class="field">
         <img class="bat" src="bat.png" alt="">
+        <div class="ball"></div>
     </div>
 </body>
 </html>
