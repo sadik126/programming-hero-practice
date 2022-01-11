@@ -6,14 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
+<style>
+
+    .container{
+        height: 70%;
+        width: 80%;
+      background-image: url('bg.jpg');
+      position: absolute;
+    }
+
+    .car img{
+        height: 240px;
+        width: 400px;
+        position: relative;
+        top: 200px;
+        left: 400px;
+    }
+
+    @keyframes sliding {
+        0%{
+           
+            left: 0;
+            
+        }
+
+        50%{
+            left: 100px;
+            right: 100px;
+        }
+        
+        100%{
+           
+           right: 100px;
+            
+        }
+    }
+
+    .car img{
+        animation: sliding 1s ease-in 0.5s infinite alternate ;
+        animation-play-state: running;
+    }
+</style>
 <body>
     <div class="container">
         <div class="car">
-          <img src="" alt="">
+          <img src="car.png" alt="">
         </div>
-        <div class="road">
-         <img src="" alt="">
-        </div>
+       
     </div>
 </body>
 </html>
