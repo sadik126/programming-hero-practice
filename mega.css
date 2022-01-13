@@ -5,8 +5,12 @@ nav>ul{
 
 nav li{
     margin-right: 1em;
-    text-decoration: none;
+    
     color: black;
+}
+
+nav li a{
+    text-decoration: none;
 }
 
 .dropdown{
