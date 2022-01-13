@@ -15,4 +15,5 @@ nav li a{
 
 .dropdown{
     position: absolute;
+    list-style: none;
 }
