@@ -20,4 +20,10 @@ nav li a{
 
 .dropdown li{
     list-style: none;
+    background-color: coral;
+    display: none;
+}
+
+nav>ul>li:hover>.dropdown li{
+    display: block;
 }
