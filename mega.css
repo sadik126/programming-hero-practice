@@ -8,3 +8,7 @@ nav li{
     text-decoration: none;
     color: black;
 }
+
+.dropdown{
+    position: relative;
+}
