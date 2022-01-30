@@ -1,4 +1,4 @@
-inch to feet 
+// inch to feet 
 
 function inchtofeet(inch){
     var feet = inch*12;
