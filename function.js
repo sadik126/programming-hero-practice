@@ -21,7 +21,9 @@ console.log('she said ', msg);
 //pizza delivery 
 
 function pizza(name,quantity){
-if(name == 'pizza'){
+
+    var foodname = name.toLowerCase();
+if(foodname == 'pizza' && quantity < 10){
     var total = 10 * quantity;
     return('hey '+ name + 'here is your '+ quantity+'pizza. your total price is '+total)
 }
@@ -31,5 +33,7 @@ else {
  
 }
 
-var msg = pizza('pizza',3);
+var msg = pizza('PIZZA',12);
 console.log(msg);
+
+
