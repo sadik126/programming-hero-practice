@@ -37,3 +37,24 @@ var msg = pizza('PIZZA',12);
 console.log(msg);
 
 
+//1+2+3+6+4
+
+function series(numbers){
+    let sum = 0;
+    for (let index = 0; index <=4; index++) {
+       
+        
+        sum = sum+ numbers[index];
+        console.log(sum);
+        
+        
+
+        
+    }
+   
+    return sum;
+    
+}
+
+var numbers = [1,25,36,52,24];
+var result = series(numbers);
