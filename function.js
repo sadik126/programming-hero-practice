@@ -58,3 +58,40 @@ function series(numbers){
 
 var numbers = [1,25,36,52,24];
 var result = series(numbers);
+
+
+// fibonacci
+
+function fav(number){
+   
+   if(typeof number !='number')
+   {
+       return'enter the number'
+   }
+   else if( number < 2){
+    return'enter more number'
+   }
+
+   else{
+
+    let array = [0,1]
+    for (let index = 2; index <=number; index++) {
+        
+        array[index]= array[index-1]+array[index-2];
+        
+    }
+    return array;
+   }
+
+
+  
+   
+   
+
+
+}
+
+var number = 0;
+var result = fav(number);
+console.log(result);
+
