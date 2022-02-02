@@ -141,3 +141,19 @@ console.log(oldest);
 
 
 
+//reverse a string
+
+function reverseletter(greetings){
+    let reverse = '';
+for (const text of greetings) {
+    // console.log(text);
+    reverse = text + reverse;
+}
+return reverse;
+}
+
+
+var greetings = 'hello,how are you';
+var result = reverseletter(greetings);
+console.log(result);
+
