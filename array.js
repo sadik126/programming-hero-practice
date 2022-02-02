@@ -16,24 +16,7 @@ console.log(sum1);
 
 
 
-//find the largest number
-let largest = 0;
-function largestnumber(numbers){
-for (let index = 0; index < numbers.length; index++) {
-    let element = numbers[index];
-    
-    if(element>largest)
-    {
-        largest = element;
-    }
-    
-}
-return largest;
-}
 
-var numbers = [21,35,65,45,85,49];
-var oldest = largestnumber(numbers);
-console.log(oldest);
 
 
 
