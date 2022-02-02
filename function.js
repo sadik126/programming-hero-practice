@@ -95,3 +95,47 @@ var number = 0;
 var result = fav(number);
 console.log(result);
 
+
+
+//find smallest number
+function smallestelemnet(number){
+var output = number[0];
+for (let index = 0; index <= 4; index++) {
+var element = number[index];
+
+if(element < output){
+   var output = element;
+}
+
+
+}
+return output;
+
+
+}
+
+var number = [23,21,25,24,45];
+var array = smallestelemnet(number);
+console.log("answer is",array);
+
+
+//find largest number
+//find the largest number
+let largest = 0;
+function largestnumber(numbers){
+for (let index = 0; index < numbers.length; index++) {
+    let element = numbers[index];
+    
+    if(element>largest)
+    {
+        largest = element;
+    }
+    
+}
+return largest;
+}
+
+var numbers = [21,35,65,45,85,49];
+var oldest = largestnumber(numbers);
+console.log(oldest);
+
