@@ -76,7 +76,14 @@ var array3 = [1,4,3]
 //eta akta array k akta pura string banay dey..ekhane array3 pura akta string hye gse
 var newjoin = array3.join("");
 
-var c = array1.concat(array2, newjoin);
+
+
+var c = array1.concat(array4, newjoin);
 
 console.log(c);
 
+
+
+var array5 = ['sadik','sad','kal'];
+var array4 = array5.slice(0 ,1 );
+console.log(array4);
