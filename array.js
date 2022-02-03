@@ -73,8 +73,10 @@ console.log(array);
 var array1 = [23,22,45,47];
 var array2 = ['sadik','sad','kal'];
 var array3 = [1,4,3]
+//eta akta array k akta pura string banay dey..ekhane array3 pura akta string hye gse
+var newjoin = array3.join("");
 
-var c = array1.concat(array2, array3);
+var c = array1.concat(array2, newjoin);
 
 console.log(c);
 
