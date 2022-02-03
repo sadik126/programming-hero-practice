@@ -72,8 +72,9 @@ console.log(array);
 //concat an array
 var array1 = [23,22,45,47];
 var array2 = ['sadik','sad','kal'];
+var array3 = [1,4,3]
 
-var c = array1.concat(array2);
+var c = array1.concat(array2, array3);
 
 console.log(c);
 
