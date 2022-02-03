@@ -64,5 +64,16 @@ for (let index = 0; index < 3; index++) {
 var array = ['sadik','sakib','mushi','ash','tamim'];
 
 array.sort();
+//reverse an array
+array.reverse();
 console.log(array);
+
+
+//concat an array
+var array1 = [23,22,45,47];
+var array2 = ['sadik','sad','kal'];
+
+var c = array1.concat(array2);
+
+console.log(c);
 
