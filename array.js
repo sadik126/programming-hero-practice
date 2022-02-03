@@ -59,4 +59,10 @@ for (let index = 0; index < 3; index++) {
 // console.log(multiarray);
 
 
+//sort an array 
+
+var array = ['sadik','sakib','mushi','ash','tamim'];
+
+array.sort();
+console.log(array);
 
