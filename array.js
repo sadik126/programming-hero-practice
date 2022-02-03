@@ -83,7 +83,7 @@ var c = array1.concat(array4, newjoin);
 console.log(c);
 
 
-
-var array5 = ['sadik','sad','kal'];
-var array4 = array5.slice(0 ,1 );
+//ekhane 2 holo kal ar karim holo 5
+var array5 = ['sadik','sad','kal','rahim','karim','opi'];
+var array4 = array5.slice(2 ,5 );
 console.log(array4);
