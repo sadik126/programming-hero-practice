@@ -91,7 +91,7 @@ function fav(number){
 
 }
 
-var number = 0;
+var number = 9;
 var result = fav(number);
 console.log(result);
 
