@@ -106,3 +106,13 @@ var array = ['a','s','g','s'];
 var result = array.indexOf('s',2);
 
 console.log(result);
+
+
+//lastindexof
+//ekhane last index of bolte last theke suru hbe
+
+var array = ['a','s','g','s'];
+
+var result = array.lastIndexOf('s');
+
+console.log(result);
