@@ -116,3 +116,14 @@ var array = ['a','s','g','s'];
 var result = array.lastIndexOf('s');
 
 console.log(result);
+
+
+
+//includes method: ekhane valyue dile jodi array er moddhe thake taile true return korbe
+ var array = ['sakib','tamim','mushfiq']
+
+ var result = array.includes('sakib');
+
+ console.log(result);
+
+ 
