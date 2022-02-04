@@ -87,3 +87,22 @@ console.log(c);
 var array5 = ['sadik','sad','kal','rahim','karim','opi'];
 var array4 = array5.slice(2 ,5 );
 console.log(array4);
+
+
+
+//isArray jodi variable array hoy taile true return korbe
+
+var array23 = ['a','b','s'];
+
+var b = Array . isArray(array23);
+
+console.log(b);
+
+
+//indexOf 
+//ekhane arrayname ar position string bole dite hbe
+var array = ['a','s','g','s'];
+
+var result = array.indexOf('s',2);
+
+console.log(result);
