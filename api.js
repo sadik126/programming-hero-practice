@@ -11,5 +11,20 @@
   function loadusers(){
    fetch('https://jsonplaceholder.typicode.com/users')
    .then(response => response.json())
-   .then(data => console.log(data))
+   .then(data => displayuser(data))
+  }
+
+  function displayuser(data){
+      let ul = document.getElementById('ul'); 
+      for (const user of data) {
+          console.log(user.name)
+        //   ul.innerHTML +=`
+        //   <li>
+        //    username : ${user.name}
+        //   </li>`
+        //   ul.appendChild(ul.innerHTML);
+        let li = document.createElement('li');
+        li.innerText = ` ${user.name}`;
+        ul.appendChild(li);
+      }
   }
