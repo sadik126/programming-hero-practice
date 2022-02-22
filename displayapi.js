@@ -9,5 +9,7 @@ function displaypost(data){
 
  for (const post of data) {
      console.log(post.title)
+     const section = document.getElementById('container');
+     const div = document.createElement('div');
  }
 }
