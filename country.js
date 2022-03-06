@@ -57,6 +57,8 @@ let country = (showcountry)=>{
    <h2>name: ${showcountry.name.common}</h2>
    <p>population: ${showcountry.population}</p>
    <p>capital: ${showcountry.capital}</p>
+   <img width="200" src="${showcountry.flags.svg}" alt="">
+
    `
    
 }
