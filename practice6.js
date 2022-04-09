@@ -26,6 +26,17 @@ const second = () => {
 }
 
 
+const data = () => {
+  let confirmmsg =  confirm("are you sure to visit");
+  console.log(confirmmsg);
+  if(confirmmsg === true){
+      location.assign ('https://www.youtube.com/') ;
+  }
+
+}
+
+
+
 
 
 
