@@ -86,7 +86,7 @@ function App() {
           </Form.Group>
           <p className='text-danger'>{error}</p>
           <Button variant="primary" type="submit">
-            Submit
+            Register
           </Button>
         </Form>
       </div>
