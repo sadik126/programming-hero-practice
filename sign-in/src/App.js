@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Form from 'react-bootstrap/Form'
-import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, sendEmailVerification, signInWithEmailAndPassword } from "firebase/auth";
 import app from './Firebase.init';
 import { useEffect, useState } from 'react';
 
@@ -12,6 +12,7 @@ const auth = getAuth(app)
 function App() {
 
   const [emailid, setEmailid] = useState('');
+  const [registered, setRegistered] = useState(false);
   const [pass, setPass] = useState('');
   const [error, setError] = useState('');
   const [validated, setValidated] = useState(false);
@@ -42,26 +43,54 @@ function App() {
     setValidated(true);
     setError('');
 
-    createUserWithEmailAndPassword(auth, emailid, pass)
-      .then(result => {
-        const user = result.user;
-        console.log(user)
-        setEmailid('')
-        setPass('')
-      })
-      .catch(error => {
-        console.error(error)
-        setError(error.message)
-      })
+
+    if (registered) {
+      console.log(emailid, pass)
+      signInWithEmailAndPassword(auth, emailid, pass)
+        .then(result => {
+          const user = result.user;
+          console.log(user);
+        })
+
+        .catch(error => {
+          console.error(error)
+          setError(error.message)
+        })
+    }
+    else {
+
+      createUserWithEmailAndPassword(auth, emailid, pass)
+        .then(result => {
+          const user = result.user;
+          console.log(user)
+          setEmailid('')
+          setPass('')
+          sendEmailVerification(auth.currentUser)
+            .then(() => {
+              console.log('email verified')
+            })
+        })
+        .catch(error => {
+          console.error(error)
+          setError(error.message)
+        })
+
+    }
+
+
 
     event.preventDefault();
+  }
+
+  const handleregistered = (e) => {
+    setRegistered(e.target.checked)
   }
 
 
   return (
     <div >
       <div className="regestration w-50 mx-auto mt-5">
-        <h2 className='text-success'>Please register!!</h2>
+        <h2 className='text-success'>Please {registered ? 'Login' : 'Registered'}!!</h2>
         <Form noValidate validated={validated} onSubmit={submit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
@@ -82,11 +111,11 @@ function App() {
             </Form.Control.Feedback>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Check me out" />
+            <Form.Check onChange={handleregistered} type="checkbox" label="Already Registered?" />
           </Form.Group>
           <p className='text-danger'>{error}</p>
           <Button variant="primary" type="submit">
-            Register
+            {registered ? 'Login' : 'Registered'}
           </Button>
         </Form>
       </div>
