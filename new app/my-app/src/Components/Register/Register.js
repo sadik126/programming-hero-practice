@@ -1,11 +1,14 @@
 import React from 'react';
+import Usefirebase from '../hooks/Usefirebase';
 
 const Register = () => {
+
+    const { signingoogle } = Usefirebase();
     return (
         <div>
             <h1>Please register here</h1>
             <br />
-            <button>Google login</button>
+            <button onClick={signingoogle}>Google login</button>
             <br />
             <br />
             <form>

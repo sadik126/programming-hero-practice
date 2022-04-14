@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react"
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import app from "../../firbase.init";
 
 const Usefirebase = () => {
+    const provider = new GoogleAuthProvider();
+    const auth = getAuth(app);
+
     const [user, setUser] = useState({})
 
 
@@ -9,7 +14,12 @@ const Usefirebase = () => {
     }, [])
 
     const signingoogle = () => {
-        console.log('sogn in google')
+        signInWithPopup(auth, provider)
+            .then(result => {
+                const user = result.user;
+                setUser(user);
+                console.log(user)
+            })
     }
 
     // return [user, setUser]
