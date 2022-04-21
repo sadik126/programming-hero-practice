@@ -7,3 +7,7 @@ app.get('/', (req, res) => {
     res.send('running my node')
 })
 
+app.listen(port, () => {
+    console.log('Crud server running')
+})
+
