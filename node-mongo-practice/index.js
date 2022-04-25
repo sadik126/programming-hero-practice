@@ -29,9 +29,11 @@ async function run() {
         await client.connect()
         const collection = client.db("foodExpress").collection("users ");
         const user = {
-            name: 'sakib khan',
-            email: 'sakib@gmail.com'
+            name: 'abul khan',
+            email: 'sakibabul@gmail.com'
         }
+        const result = await collection.insertOne(user);
+        console.log(`user inserted ${result.insertedId}`)
     }
     finally {
         await client.close()
